@@ -26,17 +26,27 @@ public class PoliceJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        Policepane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         btnCreatecaseuser = new javax.swing.JButton();
-        btnViewcaseuser = new javax.swing.JButton();
+        btnViewcasepolice = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(2, 33, 105));
 
         btnCreatecaseuser.setText("Create Case");
+        btnCreatecaseuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreatecaseuserActionPerformed(evt);
+            }
+        });
 
-        btnViewcaseuser.setText("View Case");
+        btnViewcasepolice.setText("View Case");
+        btnViewcasepolice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewcasepoliceActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -49,7 +59,7 @@ public class PoliceJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(btnViewcaseuser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnViewcasepolice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
@@ -61,11 +71,11 @@ public class PoliceJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(222, 222, 222)
-                    .addComponent(btnViewcaseuser)
+                    .addComponent(btnViewcasepolice)
                     .addContainerGap(223, Short.MAX_VALUE)))
         );
 
-        jSplitPane1.setLeftComponent(jPanel1);
+        Policepane.setLeftComponent(jPanel1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -78,30 +88,39 @@ public class PoliceJPanel extends javax.swing.JPanel {
             .addGap(0, 468, Short.MAX_VALUE)
         );
 
-        jSplitPane1.setRightComponent(jPanel3);
+        Policepane.setRightComponent(jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 685, Short.MAX_VALUE)
+            .addComponent(Policepane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(Policepane)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCreatecaseuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatecaseuserActionPerformed
+        // TODO add your handling code here:
+        // TODO add your handling code here:
+        CreateCaseJPanel createPanel = new CreateCaseJPanel();
+        Policepane.setRightComponent(createPanel);
+    }//GEN-LAST:event_btnCreatecaseuserActionPerformed
+
+    private void btnViewcasepoliceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewcasepoliceActionPerformed
+        // TODO add your handling code here:
+        ViewPoliceCaseJPanel viewpolicePanel=new ViewPoliceCaseJPanel();
+        Policepane.setRightComponent(viewpolicePanel);
+    }//GEN-LAST:event_btnViewcasepoliceActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSplitPane Policepane;
     private javax.swing.JButton btnCreatecaseuser;
-    private javax.swing.JButton btnViewcaseuser;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton btnViewcasepolice;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }

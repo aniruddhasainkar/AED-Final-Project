@@ -4,6 +4,9 @@
  */
 package Ui;
 
+import java.awt.CardLayout;
+import javax.swing.JRootPane;
+
 /**
  *
  * @author aniruddhasainkar
@@ -15,6 +18,7 @@ public class ViewUserJPanel extends javax.swing.JPanel {
      */
     public ViewUserJPanel() {
         initComponents();
+ 
     }
 
     /**
@@ -26,23 +30,22 @@ public class ViewUserJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel4 = new javax.swing.JLabel();
-        txtEmailuser = new javax.swing.JTextField();
-        txtPhoneuser = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        txtNameuser = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        txtAgeuser = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
-        caseID = new javax.swing.JLabel();
-        caseIDinput = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabel31 = new javax.swing.JLabel();
+        txtEmailuser2 = new javax.swing.JTextField();
+        txtPhoneuser2 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        txtNameuser2 = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        txtAgeuser2 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
+        caseID2 = new javax.swing.JLabel();
+        caseIDinput2 = new javax.swing.JLabel();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -53,52 +56,55 @@ public class ViewUserJPanel extends javax.swing.JPanel {
                 "Case ID", "Name", "Age", "Email ", "Phone No", "Case Type", "Status"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jTable3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jTable3);
 
-        jLabel4.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel4.setText("Phone:");
+        jLabel31.setForeground(new java.awt.Color(2, 5, 105));
+        jLabel31.setText("Phone:");
 
-        txtEmailuser.addActionListener(new java.awt.event.ActionListener() {
+        txtEmailuser2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailuserActionPerformed(evt);
             }
         });
 
-        txtPhoneuser.addActionListener(new java.awt.event.ActionListener() {
+        txtPhoneuser2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPhoneuserActionPerformed(evt);
             }
         });
 
-        jLabel1.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel1.setText("Name:");
+        jLabel30.setForeground(new java.awt.Color(2, 5, 105));
+        jLabel30.setText("Name:");
 
-        txtNameuser.addActionListener(new java.awt.event.ActionListener() {
+        txtNameuser2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNameuserActionPerformed(evt);
             }
         });
 
-        jLabel2.setBackground(new java.awt.Color(2, 5, 105));
-        jLabel2.setText("Age:");
+        jLabel29.setBackground(new java.awt.Color(2, 5, 105));
+        jLabel29.setText("Age:");
 
-        jLabel3.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel3.setText("Email:");
+        jLabel28.setForeground(new java.awt.Color(2, 5, 105));
+        jLabel28.setText("Email:");
 
-        txtAgeuser.addActionListener(new java.awt.event.ActionListener() {
+        txtAgeuser2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtAgeuserActionPerformed(evt);
             }
         });
 
-        jLabel9.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel9.setText("Type of Case:");
+        jLabel27.setForeground(new java.awt.Color(2, 5, 105));
+        jLabel27.setText("Type of Case:");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Criminal", "Civil", "Cyber", "Corporate" }));
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Criminal", "Civil", "Cyber", "Corporate" }));
 
-        jButton1.setText("jButton1");
-
-        caseID.setText("Case ID:");
+        caseID2.setText("Case ID:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -107,111 +113,124 @@ public class ViewUserJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(119, 119, 119)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(26, 26, 26))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel29)
+                                .addGap(47, 47, 47)
+                                .addComponent(txtAgeuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel28)
+                                .addGap(37, 37, 37)
+                                .addComponent(txtEmailuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel31)
+                                .addGap(33, 33, 33)
+                                .addComponent(txtPhoneuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel30)
+                                    .addComponent(caseID2))
                                 .addGap(23, 23, 23)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(47, 47, 47)
-                                        .addComponent(txtAgeuser, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(37, 37, 37)
-                                        .addComponent(txtEmailuser, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addGap(33, 33, 33)
-                                        .addComponent(txtPhoneuser, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel1)
-                                            .addComponent(caseID))
-                                        .addGap(23, 23, 23)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(txtNameuser, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
-                                            .addComponent(caseIDinput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                .addGap(121, 121, 121)
-                                .addComponent(jLabel9)
-                                .addGap(18, 18, 18)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(93, Short.MAX_VALUE))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtNameuser2, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE)
+                                    .addComponent(caseIDinput2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(123, 123, 123)
+                        .addComponent(jLabel27)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(93, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(caseID)
-                    .addComponent(caseIDinput, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(47, 47, 47)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(caseID2)
+                    .addComponent(caseIDinput2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel27)
+                        .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtNameuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel9)
-                                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(txtNameuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(txtAgeuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txtAgeuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtEmailuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel3))
+                                    .addComponent(txtEmailuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel28))
                                 .addGap(26, 26, 26)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(txtPhoneuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)))
-                            .addComponent(jLabel2)))
-                    .addComponent(jLabel1))
+                                    .addComponent(txtPhoneuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel31)))
+                            .addComponent(jLabel29)))
+                    .addComponent(jLabel30))
                 .addContainerGap(95, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtEmailuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailuserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtEmailuserActionPerformed
-
-    private void txtPhoneuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneuserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPhoneuserActionPerformed
-
-    private void txtNameuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameuserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNameuserActionPerformed
 
     private void txtAgeuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeuserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtAgeuserActionPerformed
 
+    private void txtNameuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameuserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameuserActionPerformed
+
+    private void txtPhoneuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPhoneuserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPhoneuserActionPerformed
+
+    private void txtEmailuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailuserActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailuserActionPerformed
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        // TODO add your handling code here:
+        ViewIndivualProfileJPanel individualProfile = new ViewIndivualProfileJPanel();
+        final JRootPane rootPane = new JRootPane();
+        rootPane.setContentPane(individualProfile);
+
+    }//GEN-LAST:event_jTable1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel caseID;
+    private javax.swing.JLabel caseID2;
     private javax.swing.JLabel caseIDinput;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel caseIDinput2;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable3;
     private javax.swing.JTextField txtAgeuser;
+    private javax.swing.JTextField txtAgeuser2;
     private javax.swing.JTextField txtEmailuser;
+    private javax.swing.JTextField txtEmailuser2;
     private javax.swing.JTextField txtNameuser;
+    private javax.swing.JTextField txtNameuser2;
     private javax.swing.JTextField txtPhoneuser;
+    private javax.swing.JTextField txtPhoneuser2;
     // End of variables declaration//GEN-END:variables
 }

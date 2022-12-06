@@ -26,7 +26,7 @@ public class UserJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jSplitPane1 = new javax.swing.JSplitPane();
+        Userpane = new javax.swing.JSplitPane();
         jPanel2 = new javax.swing.JPanel();
         btnCreatecaseuser = new javax.swing.JButton();
         btnViewcaseuser = new javax.swing.JButton();
@@ -37,10 +37,25 @@ public class UserJPanel extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(2, 33, 105));
 
         btnCreatecaseuser.setText("Create Case");
+        btnCreatecaseuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreatecaseuserActionPerformed(evt);
+            }
+        });
 
         btnViewcaseuser.setText("View Case");
+        btnViewcaseuser.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewcaseuserActionPerformed(evt);
+            }
+        });
 
         jButton1.setText("Appointments");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -66,7 +81,7 @@ public class UserJPanel extends javax.swing.JPanel {
                 .addContainerGap(187, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setLeftComponent(jPanel2);
+        Userpane.setLeftComponent(jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -89,28 +104,46 @@ public class UserJPanel extends javax.swing.JPanel {
                 .addContainerGap(426, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setRightComponent(jPanel3);
+        Userpane.setRightComponent(jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(Userpane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(Userpane, javax.swing.GroupLayout.Alignment.TRAILING)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnCreatecaseuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreatecaseuserActionPerformed
+        // TODO add your handling code here:
+        CreateCaseJPanel createPanel = new CreateCaseJPanel();
+        Userpane.setRightComponent(createPanel);
+    }//GEN-LAST:event_btnCreatecaseuserActionPerformed
+
+    private void btnViewcaseuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewcaseuserActionPerformed
+        // TODO add your handling code here:
+        ViewUserJPanel viewUserPanel=new ViewUserJPanel();
+        Userpane.setRightComponent(viewUserPanel);
+    }//GEN-LAST:event_btnViewcaseuserActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        ViewAppoitmentJPanel viewapp=new ViewAppoitmentJPanel();
+        Userpane.setRightComponent(viewapp);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSplitPane Userpane;
     private javax.swing.JButton btnCreatecaseuser;
     private javax.swing.JButton btnViewcaseuser;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }
