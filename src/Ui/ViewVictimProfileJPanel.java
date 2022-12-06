@@ -216,6 +216,7 @@ public class ViewVictimProfileJPanel extends javax.swing.JPanel {
 
     private void txtNameuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameuserActionPerformed
         // TODO add your handling code here:
+ 
     }//GEN-LAST:event_txtNameuserActionPerformed
 
     private void txtAgeuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAgeuserActionPerformed

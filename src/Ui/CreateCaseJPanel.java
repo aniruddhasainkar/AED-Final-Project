@@ -271,4 +271,8 @@ public class CreateCaseJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtPhoneuser;
     private javax.swing.JTextField txtStateuser;
     // End of variables declaration//GEN-END:variables
+
+    void setRightComponent() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

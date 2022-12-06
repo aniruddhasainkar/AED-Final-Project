@@ -27,7 +27,7 @@ public class LawFrimAdminJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jSplitPane1 = new javax.swing.JSplitPane();
+        LawFirmAdminPane = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -39,6 +39,11 @@ public class LawFrimAdminJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(2, 33, 105));
 
         jButton1.setText("Employees");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cases");
 
@@ -63,7 +68,7 @@ public class LawFrimAdminJPanel extends javax.swing.JPanel {
                 .addContainerGap(278, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setLeftComponent(jPanel1);
+        LawFirmAdminPane.setLeftComponent(jPanel1);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -76,27 +81,33 @@ public class LawFrimAdminJPanel extends javax.swing.JPanel {
             .addGap(0, 496, Short.MAX_VALUE)
         );
 
-        jSplitPane1.setRightComponent(jPanel3);
+        LawFirmAdminPane.setRightComponent(jPanel3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(LawFirmAdminPane)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addComponent(LawFirmAdminPane)
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        ViewLawFirmAdmin lawfirmadmin = new ViewLawFirmAdmin();
+        LawFirmAdminPane.setRightComponent(lawfirmadmin);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JSplitPane LawFirmAdminPane;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JSplitPane jSplitPane1;
     // End of variables declaration//GEN-END:variables
 }
