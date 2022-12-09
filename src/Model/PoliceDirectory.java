@@ -6,8 +6,8 @@ package Model;
 
 /**
  *
- * @author aniruddhasainkar
+ * @author keerthanaakannan
  */
-public class Lawyer {
+public class PoliceDirectory {
     
 }

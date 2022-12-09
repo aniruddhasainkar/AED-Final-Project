@@ -132,7 +132,7 @@ public class UserJPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        ViewAppoitmentJPanel viewapp=new ViewAppoitmentJPanel();
+        ViewAppointmentJPanel viewapp=new ViewAppointmentJPanel();
         Userpane.setRightComponent(viewapp);
     }//GEN-LAST:event_jButton1ActionPerformed
 

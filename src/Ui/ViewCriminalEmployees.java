@@ -8,12 +8,12 @@ package Ui;
  *
  * @author aniruddhasainkar
  */
-public class ViewLawFirmAdmin extends javax.swing.JPanel {
+public class ViewCriminalEmployees extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewLawFirmAdmin
      */
-    public ViewLawFirmAdmin() {
+    public ViewCriminalEmployees() {
         initComponents();
     }
 

@@ -4,6 +4,8 @@
  */
 package Ui;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author aniruddhasainkar
@@ -15,6 +17,18 @@ public class InvestigationSummaryJPanel extends javax.swing.JPanel {
      */
     public InvestigationSummaryJPanel() {
         initComponents();
+         uploadEvidenceLabel.setVisible(false);
+        uploadButton.setVisible(false);
+        addInfoLabel.setVisible(false);
+        addInfoText.setVisible(false);
+        caseTypeLabel.setVisible(false);
+        criminalButton.setVisible(false);
+        civilButton.setVisible(false);
+        corpButton.setVisible(false);
+        updateButton.setVisible(false);
+        medReqlabel.setVisible(false);
+        MedicalButton.setVisible(false);
+        addInfoScrollPane.setVisible(false);
     }
 
     /**
@@ -26,172 +40,291 @@ public class InvestigationSummaryJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel8 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
-        jButton2 = new javax.swing.JButton();
+        invContainer = new javax.swing.JPanel();
+        investigationSummary = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        uploadEvidenceLabel = new javax.swing.JLabel();
+        uploadButton = new javax.swing.JButton();
+        addInfoScrollPane = new javax.swing.JScrollPane();
+        addInfoText = new javax.swing.JTextArea();
+        addInfoLabel = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        caseValidYesButton = new javax.swing.JRadioButton();
+        medReqlabel = new javax.swing.JLabel();
+        caseValidNoButton = new javax.swing.JRadioButton();
+        caseTypeLabel = new javax.swing.JLabel();
+        corpButton = new javax.swing.JRadioButton();
+        criminalButton = new javax.swing.JRadioButton();
+        updateButton = new javax.swing.JButton();
+        civilButton = new javax.swing.JRadioButton();
+        MedicalButton = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        jLabel1.setText("Investigation Summary");
+        invContainer.setLayout(new java.awt.CardLayout());
 
-        jLabel3.setText("Upload Evidence:");
+        investigationSummary.setName(""); // NOI18N
+        investigationSummary.setPreferredSize(new java.awt.Dimension(1822, 797));
 
-        jButton1.setText("Upload");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        jLabel2.setText("Investigation Summary");
+
+        uploadEvidenceLabel.setText("Upload Evidence:");
+
+        uploadButton.setText("Upload");
+        uploadButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                uploadButtonActionPerformed(evt);
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        addInfoText.setColumns(20);
+        addInfoText.setRows(5);
+        addInfoScrollPane.setViewportView(addInfoText);
 
-        jLabel7.setText("Additional Info");
+        addInfoLabel.setText("Additional Info");
 
-        jLabel5.setText(" Case Valid:");
+        jLabel10.setText(" Case Valid:");
 
-        jRadioButton1.setText("Yes");
-
-        jLabel8.setText("Medical Required?:");
-
-        jRadioButton2.setText("No");
-
-        jLabel6.setText("Type of Case:");
-
-        jRadioButton3.setText("Civil");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        caseValidYesButton.setText("Yes");
+        caseValidYesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                caseValidYesButtonActionPerformed(evt);
             }
         });
 
-        jRadioButton4.setText("Criminal");
+        medReqlabel.setText("Medical ");
 
-        jButton2.setText("Update");
+        caseValidNoButton.setText("No");
+        caseValidNoButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                caseValidNoButtonActionPerformed(evt);
+            }
+        });
+
+        caseTypeLabel.setText("Type of Case:");
+
+        corpButton.setText("Corporate");
+        corpButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                corpButtonActionPerformed(evt);
+            }
+        });
+
+        criminalButton.setText("Criminal");
+        criminalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                criminalButtonActionPerformed(evt);
+            }
+        });
+
+        updateButton.setText("Update");
+
+        civilButton.setText("Civil");
+        civilButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                civilButtonActionPerformed(evt);
+            }
+        });
+
+        MedicalButton.setText("Take Medical");
+        MedicalButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MedicalButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout investigationSummaryLayout = new javax.swing.GroupLayout(investigationSummary);
+        investigationSummary.setLayout(investigationSummaryLayout);
+        investigationSummaryLayout.setHorizontalGroup(
+            investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(investigationSummaryLayout.createSequentialGroup()
+                .addGap(414, 414, 414)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2)
+                    .addGroup(investigationSummaryLayout.createSequentialGroup()
+                        .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(updateButton)
+                            .addGroup(investigationSummaryLayout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(71, 71, 71)
+                                .addComponent(caseValidYesButton)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(caseValidNoButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(investigationSummaryLayout.createSequentialGroup()
+                .addGap(157, 157, 157)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(uploadEvidenceLabel)
+                    .addComponent(addInfoLabel))
+                .addGap(33, 33, 33)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(investigationSummaryLayout.createSequentialGroup()
+                        .addComponent(uploadButton)
+                        .addGap(311, 311, 311)
+                        .addComponent(caseTypeLabel))
+                    .addGroup(investigationSummaryLayout.createSequentialGroup()
+                        .addComponent(addInfoScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(medReqlabel)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(investigationSummaryLayout.createSequentialGroup()
+                        .addComponent(criminalButton)
+                        .addGap(18, 18, 18)
+                        .addComponent(civilButton))
+                    .addComponent(MedicalButton))
+                .addGap(18, 18, 18)
+                .addComponent(corpButton)
+                .addGap(0, 97, Short.MAX_VALUE))
+        );
+        investigationSummaryLayout.setVerticalGroup(
+            investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(investigationSummaryLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel2)
+                .addGap(29, 29, 29)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(caseValidYesButton)
+                    .addComponent(caseValidNoButton))
+                .addGap(41, 41, 41)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(uploadEvidenceLabel)
+                    .addComponent(uploadButton)
+                    .addComponent(caseTypeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(criminalButton)
+                    .addComponent(civilButton)
+                    .addComponent(corpButton))
+                .addGap(49, 49, 49)
+                .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(addInfoLabel)
+                    .addComponent(addInfoScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(investigationSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(medReqlabel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(MedicalButton)))
+                .addGap(66, 66, 66)
+                .addComponent(updateButton)
+                .addContainerGap(326, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(305, 305, 305)
-                        .addComponent(jButton2)))
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(investigationSummary, javax.swing.GroupLayout.PREFERRED_SIZE, 1102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(45, 45, 45)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addGap(511, 511, 511))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(139, 139, 139)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addGroup(layout.createSequentialGroup()
-                                                        .addComponent(jRadioButton1)
-                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                        .addComponent(jRadioButton2))
-                                                    .addComponent(jButton1))))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel8)
-                                            .addComponent(jLabel6)))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addGap(145, 145, 145)))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(jRadioButton3)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(jRadioButton4))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(186, 186, 186)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGap(46, 46, 46)))
+                    .addComponent(invContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 1097, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 32, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 321, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(76, 76, 76))
+                .addComponent(investigationSummary, javax.swing.GroupLayout.DEFAULT_SIZE, 729, Short.MAX_VALUE)
+                .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(147, 147, 147)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel5)
-                        .addComponent(jRadioButton1)
-                        .addComponent(jRadioButton2)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jRadioButton3)
-                        .addComponent(jRadioButton4))
-                    .addGap(34, 34, 34)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3)
-                        .addComponent(jButton1))
-                    .addGap(49, 49, 49)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel7)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addContainerGap(147, Short.MAX_VALUE)))
+                    .addComponent(invContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 717, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 18, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    private void uploadButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadButtonActionPerformed
+        // TODO add your handling code here:\
+         ViewVictimMedicalJPanel vicMed = new ViewVictimMedicalJPanel ();
+         invContainer.add("ManageInvestigationSummary", vicMed);
+        CardLayout layout = (CardLayout) invContainer.getLayout();
+        layout.next(invContainer);
+        investigationSummary.setVisible(false);     
+    }//GEN-LAST:event_uploadButtonActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void corpButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_corpButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        medReqlabel.setVisible(false);
+        MedicalButton.setVisible(false);
+    }//GEN-LAST:event_corpButtonActionPerformed
+
+    private void civilButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_civilButtonActionPerformed
+        // TODO add your handling code here:
+        medReqlabel.setVisible(false);
+        MedicalButton.setVisible(false);
+    }//GEN-LAST:event_civilButtonActionPerformed
+
+    private void criminalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_criminalButtonActionPerformed
+        // TODO add your handling code here:
+        medReqlabel.setVisible(true);
+        MedicalButton.setVisible(true);
+    }//GEN-LAST:event_criminalButtonActionPerformed
+
+    private void caseValidNoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseValidNoButtonActionPerformed
+        // TODO add your handling code here:
+        caseValidYesButton.setSelected(false);
+        uploadEvidenceLabel.setVisible(false);
+        uploadButton.setVisible(false);
+        addInfoLabel.setVisible(false);
+        addInfoText.setVisible(false);
+        caseTypeLabel.setVisible(false);
+        criminalButton.setVisible(false);
+        civilButton.setVisible(false);
+        corpButton.setVisible(false);
+        updateButton.setVisible(false);
+        //addInfoText.setVisible(false);
+        medReqlabel.setVisible(false);
+        MedicalButton.setVisible(false);
+        addInfoScrollPane.setVisible(false);
+    }//GEN-LAST:event_caseValidNoButtonActionPerformed
+
+    private void caseValidYesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_caseValidYesButtonActionPerformed
+        // TODO add your handling code here:
+        caseValidNoButton.setSelected(false);
+        uploadEvidenceLabel.setVisible(true);
+        uploadButton.setVisible(true);
+        addInfoLabel.setVisible(true);
+        addInfoText.setVisible(true);
+        caseTypeLabel.setVisible(true);
+        criminalButton.setVisible(true);
+        civilButton.setVisible(true);
+        corpButton.setVisible(true);
+        updateButton.setVisible(true);
+        addInfoText.setVisible(true);
+        medReqlabel.setVisible(false);
+         MedicalButton.setVisible(false);
+        addInfoScrollPane.setVisible(true);
+    }//GEN-LAST:event_caseValidYesButtonActionPerformed
+
+    private void MedicalButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MedicalButtonActionPerformed
+        // TODO add your handling code here:
+       
+        HospitalAdmin hosp = new HospitalAdmin();
+        invContainer.add("ManageEnterpriseJPanel", hosp);
+        CardLayout layout = (CardLayout) invContainer.getLayout();
+        layout.next(invContainer);
+        investigationSummary.setVisible(false);   
+        invContainer.setVisible(true);
+        
+    }//GEN-LAST:event_MedicalButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton MedicalButton;
+    private javax.swing.JLabel addInfoLabel;
+    private javax.swing.JScrollPane addInfoScrollPane;
+    private javax.swing.JTextArea addInfoText;
+    private javax.swing.JLabel caseTypeLabel;
+    private javax.swing.JRadioButton caseValidNoButton;
+    private javax.swing.JRadioButton caseValidYesButton;
+    private javax.swing.JRadioButton civilButton;
+    private javax.swing.JRadioButton corpButton;
+    private javax.swing.JRadioButton criminalButton;
+    private javax.swing.JPanel invContainer;
+    private javax.swing.JPanel investigationSummary;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel medReqlabel;
+    private javax.swing.JButton updateButton;
+    private javax.swing.JButton uploadButton;
+    private javax.swing.JLabel uploadEvidenceLabel;
     // End of variables declaration//GEN-END:variables
 }

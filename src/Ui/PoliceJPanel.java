@@ -30,6 +30,7 @@ public class PoliceJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         btnCreatecaseuser = new javax.swing.JButton();
         btnViewcasepolice = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
 
         jPanel1.setBackground(new java.awt.Color(2, 33, 105));
@@ -48,31 +49,37 @@ public class PoliceJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setText("Add Police");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnCreatecaseuser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnCreatecaseuser, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnViewcasepolice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(btnViewcasepolice, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addContainerGap()))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(145, 145, 145)
+                .addGap(53, 53, 53)
                 .addComponent(btnCreatecaseuser)
-                .addContainerGap(300, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(222, 222, 222)
-                    .addComponent(btnViewcasepolice)
-                    .addContainerGap(223, Short.MAX_VALUE)))
+                .addGap(29, 29, 29)
+                .addComponent(btnViewcasepolice)
+                .addGap(99, 99, 99)
+                .addComponent(jButton1)
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
         Policepane.setLeftComponent(jPanel1);
@@ -115,11 +122,18 @@ public class PoliceJPanel extends javax.swing.JPanel {
         Policepane.setRightComponent(viewpolicePanel);
     }//GEN-LAST:event_btnViewcasepoliceActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        CreateandViewPolice addpolice=new CreateandViewPolice();
+        Policepane.setRightComponent(addpolice);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSplitPane Policepane;
     private javax.swing.JButton btnCreatecaseuser;
     private javax.swing.JButton btnViewcasepolice;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables

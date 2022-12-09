@@ -4,6 +4,8 @@
  */
 package Ui;
 
+import java.awt.CardLayout;
+
 /**
  *
  * @author aniruddhasainkar
@@ -28,6 +30,7 @@ public class DistrictCourt extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        districtcourt = new javax.swing.JPanel();
 
         jButton1.setText("Case");
 
@@ -37,6 +40,8 @@ public class DistrictCourt extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
+
+        districtcourt.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -48,6 +53,11 @@ public class DistrictCourt extends javax.swing.JPanel {
                     .addComponent(jButton2)
                     .addComponent(jButton1))
                 .addGap(309, 309, 309))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(districtcourt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -57,15 +67,25 @@ public class DistrictCourt extends javax.swing.JPanel {
                 .addGap(80, 80, 80)
                 .addComponent(jButton2)
                 .addContainerGap(285, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(districtcourt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+       DistrictCourtAdmin panel = new DistrictCourtAdmin();
+       districtcourt.add("ManageEnterpriseJPanel", panel);
+        CardLayout layout = (CardLayout) districtcourt.getLayout();
+        layout.next(districtcourt);
     }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel districtcourt;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables

@@ -4,17 +4,24 @@
  */
 package Ui;
 
+import java.awt.CardLayout;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author aniruddhasainkar
  */
-public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
+
+public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form ViewIndivualProfileJPanel
      */
-    public ViewIndivualProfileJPanel() {
+    JFrame f;  
+    public ViewIndividualProfileJPanel() {
         initComponents();
+        
     }
 
     /**
@@ -28,7 +35,7 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
 
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
-        jSplitPane1 = new javax.swing.JSplitPane();
+        victimProfile = new javax.swing.JSplitPane();
         jPanel1 = new javax.swing.JPanel();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -54,16 +61,30 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
+        vicProfContainer = new javax.swing.JPanel();
 
         jButton1.setText("Victim Profile");
 
         jButton2.setText("Medical Reports");
 
+        victimProfile.setName(""); // NOI18N
+        victimProfile.setPreferredSize(new java.awt.Dimension(1822, 797));
+
         jPanel1.setBackground(new java.awt.Color(2, 33, 105));
 
         jButton4.setText("Evidence");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Investigation Summary");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,10 +106,10 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
                 .addComponent(jButton4)
                 .addGap(43, 43, 43)
                 .addComponent(jButton5)
-                .addContainerGap(338, Short.MAX_VALUE))
+                .addContainerGap(549, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setLeftComponent(jPanel1);
+        victimProfile.setLeftComponent(jPanel1);
 
         jLabel8.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel8.setText("Victim Profile");
@@ -135,6 +156,11 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
         jButton3.setBackground(new java.awt.Color(2, 33, 105));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Assign to Investigation");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton6.setBackground(new java.awt.Color(2, 33, 105));
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
@@ -168,72 +194,71 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(51, 51, 51)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
+                        .addGap(333, 333, 333)
+                        .addComponent(jLabel8))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(336, 336, 336)
+                        .addComponent(jButton3))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(363, 363, 363)
+                        .addComponent(jButton6)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
+                            .addComponent(jLabel2)
                             .addComponent(jLabel4)
                             .addComponent(jLabel3))
-                        .addGap(12, 12, 12)
+                        .addGap(48, 48, 48)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                                    .addComponent(jLabel12)
+                                    .addGap(117, 117, 117)
+                                    .addComponent(jLabel7)
+                                    .addGap(51, 51, 51))
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addComponent(lblName)
+                                            .addGap(109, 109, 109)
+                                            .addComponent(jLabel5))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addComponent(jLabel11)
+                                            .addGap(117, 117, 117)
+                                            .addComponent(jLabel6))
+                                        .addGroup(jPanel2Layout.createSequentialGroup()
+                                            .addGap(158, 158, 158)
+                                            .addComponent(jLabel9)))
+                                    .addGap(7, 7, 7)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel13)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel9))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                                                .addComponent(lblName)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel5))
-                                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                                .addComponent(jLabel11)
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(jLabel6)
-                                                .addGap(12, 12, 12)))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel12)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(jLabel7)
-                                        .addGap(15, 15, 15)))
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel16))
-                                .addGap(119, 119, 119))
+                                .addComponent(jLabel13)
+                                .addGap(203, 203, 203)))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGap(93, 93, 93)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton3)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGap(17, 17, 17)
-                                        .addComponent(jButton6)))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(11, 11, 11)
+                                .addComponent(jLabel14))
+                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(4, 4, 4)
+                        .addGap(225, 225, 225)
                         .addComponent(jButton7)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(174, 174, 174)
-                .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(363, 363, 363)
-                .addComponent(jButton8)
-                .addGap(0, 113, Short.MAX_VALUE))
+                        .addGap(170, 170, 170)
+                        .addComponent(jButton8)))
+                .addContainerGap(285, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(33, 33, 33)
+                .addGap(34, 34, 34)
                 .addComponent(jLabel8)
-                .addGap(47, 47, 47)
+                .addGap(46, 46, 46)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel5)
@@ -259,26 +284,42 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel16))
                 .addGap(60, 60, 60)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(jButton6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton8)
-                    .addComponent(jButton7))
-                .addGap(95, 95, 95))
+                    .addComponent(jButton7)
+                    .addComponent(jButton8))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
-        jSplitPane1.setRightComponent(jPanel2);
+        victimProfile.setRightComponent(jPanel2);
+
+        vicProfContainer.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(victimProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 1109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(vicProfContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSplitPane1)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(victimProfile, javax.swing.GroupLayout.PREFERRED_SIZE, 721, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(vicProfContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -288,11 +329,39 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
+       //f=new JFrame();   
+        //JOptionPane.showInputDialog(f,"Enter Date");
+       bookAppointment book=new bookAppointment();
+       victimProfile.setRightComponent(book);
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        // TODO add your handling code here:
+        InvestigationSummaryJPanel panel = new InvestigationSummaryJPanel();
+        victimProfile.setRightComponent(panel);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        // TODO add your handling code here:
+        ViewVictimMedicalJPanel vicMed = new ViewVictimMedicalJPanel ();
+        victimProfile.setRightComponent(vicMed);
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        InvestigationSummaryJPanel viewInv = new  InvestigationSummaryJPanel();
+        //victimProfile.setRightComponent(viewInv);
+        //victimProfile.setLeftComponent(false);
+        vicProfContainer.add("ManageEnterpriseJPanel", viewInv);
+        CardLayout layout = (CardLayout) vicProfContainer.getLayout();
+        layout.next(vicProfContainer);
+        victimProfile.setVisible(false);
+        
+    }//GEN-LAST:event_jButton3ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -322,7 +391,8 @@ public class ViewIndivualProfileJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JLabel lblName;
+    private javax.swing.JPanel vicProfContainer;
+    private javax.swing.JSplitPane victimProfile;
     // End of variables declaration//GEN-END:variables
 }
