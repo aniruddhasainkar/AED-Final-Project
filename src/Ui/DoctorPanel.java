@@ -10,13 +10,26 @@ import java.awt.CardLayout;
  *
  * @author keerthanaakannan
  */
-public class CheckupAdminPanel extends javax.swing.JPanel {
+public class DoctorPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form CheckupAdminPanel
      */
-    public CheckupAdminPanel() {
+    public DoctorPanel() {
         initComponents();
+        PatID.setVisible(false);
+        patientidinput.setVisible(false);
+        Name.setVisible(false);
+        NameLabel.setVisible(false);
+        Phone.setVisible(false);
+        PhoneLabel.setVisible(false);
+        AddDoctor.setVisible(false);
+        UpdateDoctor.setVisible(false);
+        AgeLabel.setVisible(false);
+        Age.setVisible(false);
+        emailLabel.setVisible(false);
+        email.setVisible(false);
+        deleteDoctor.setVisible(false);
     }
 
     /**
@@ -32,19 +45,19 @@ public class CheckupAdminPanel extends javax.swing.JPanel {
         paneltable = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         UserTable = new javax.swing.JTable();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        caseID2 = new javax.swing.JLabel();
-        caseIDinput2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Phone = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
+        PatID = new javax.swing.JLabel();
+        patientidinput = new javax.swing.JLabel();
+        PhoneLabel = new javax.swing.JLabel();
+        Age = new javax.swing.JLabel();
+        email = new javax.swing.JLabel();
+        AgeLabel = new javax.swing.JLabel();
+        emailLabel = new javax.swing.JLabel();
+        NameLabel = new javax.swing.JLabel();
+        AddDoctor = new javax.swing.JButton();
+        UpdateDoctor = new javax.swing.JButton();
+        deleteDoctor = new javax.swing.JButton();
         container = new javax.swing.JPanel();
 
         CheckupLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
@@ -68,39 +81,39 @@ public class CheckupAdminPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(UserTable);
 
-        jLabel31.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel31.setText("Phone:");
+        Phone.setForeground(new java.awt.Color(2, 5, 105));
+        Phone.setText("Phone:");
 
-        jLabel30.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel30.setText("Name:");
+        Name.setForeground(new java.awt.Color(2, 5, 105));
+        Name.setText("Name:");
 
-        caseID2.setText("Patient ID");
+        PatID.setText("Patient ID");
 
-        jLabel5.setText("jLabel5");
+        PhoneLabel.setText("jLabel5");
 
-        jLabel29.setBackground(new java.awt.Color(2, 5, 105));
-        jLabel29.setText("Age:");
+        Age.setBackground(new java.awt.Color(2, 5, 105));
+        Age.setText("Age:");
 
-        jLabel28.setForeground(new java.awt.Color(2, 5, 105));
-        jLabel28.setText("Email:");
+        email.setForeground(new java.awt.Color(2, 5, 105));
+        email.setText("Email:");
 
-        jLabel6.setText("jLabel6");
+        AgeLabel.setText("jLabel6");
 
-        jLabel7.setText("jLabel7");
+        emailLabel.setText("jLabel7");
 
-        jLabel8.setText("jLabel8");
+        NameLabel.setText("jLabel8");
 
-        jButton3.setBackground(new java.awt.Color(2, 33, 105));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Add");
+        AddDoctor.setBackground(new java.awt.Color(2, 33, 105));
+        AddDoctor.setForeground(new java.awt.Color(255, 255, 255));
+        AddDoctor.setText("Add");
 
-        jButton5.setBackground(new java.awt.Color(2, 33, 105));
-        jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Update");
+        UpdateDoctor.setBackground(new java.awt.Color(2, 33, 105));
+        UpdateDoctor.setForeground(new java.awt.Color(255, 255, 255));
+        UpdateDoctor.setText("Update");
 
-        jButton4.setBackground(new java.awt.Color(2, 33, 105));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Delete");
+        deleteDoctor.setBackground(new java.awt.Color(2, 33, 105));
+        deleteDoctor.setForeground(new java.awt.Color(255, 255, 255));
+        deleteDoctor.setText("Delete");
 
         javax.swing.GroupLayout paneltableLayout = new javax.swing.GroupLayout(paneltable);
         paneltable.setLayout(paneltableLayout);
@@ -113,33 +126,33 @@ public class CheckupAdminPanel extends javax.swing.JPanel {
                     .addGroup(paneltableLayout.createSequentialGroup()
                         .addGap(107, 107, 107)
                         .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel30)
-                            .addComponent(caseID2)
+                            .addComponent(Name)
+                            .addComponent(PatID)
                             .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel28)
-                                    .addComponent(jLabel29))
-                                .addComponent(jLabel31)))
+                                    .addComponent(email)
+                                    .addComponent(Age))
+                                .addComponent(Phone)))
                         .addGap(174, 174, 174)
                         .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(emailLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(AgeLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGroup(paneltableLayout.createSequentialGroup()
                                     .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(NameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(PhoneLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGap(4, 4, 4))
-                                .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING))
+                                .addComponent(deleteDoctor, javax.swing.GroupLayout.Alignment.TRAILING))
                             .addGroup(paneltableLayout.createSequentialGroup()
-                                .addComponent(caseIDinput2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(patientidinput, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(4, 4, 4)))))
                 .addContainerGap(110, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneltableLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(AddDoctor)
                 .addGap(72, 72, 72)
-                .addComponent(jButton5)
+                .addComponent(UpdateDoctor)
                 .addGap(336, 336, 336))
         );
         paneltableLayout.setVerticalGroup(
@@ -150,33 +163,33 @@ public class CheckupAdminPanel extends javax.swing.JPanel {
                         .addGap(33, 33, 33)
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
-                        .addComponent(caseID2))
+                        .addComponent(PatID))
                     .addGroup(paneltableLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(caseIDinput2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(patientidinput, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(paneltableLayout.createSequentialGroup()
-                        .addComponent(jLabel30)
+                        .addComponent(Name)
                         .addGap(18, 18, 18)
                         .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel31))
+                            .addComponent(PhoneLabel)
+                            .addComponent(Phone))
                         .addGap(33, 33, 33)
-                        .addComponent(jLabel29)
+                        .addComponent(Age)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel28))
+                        .addComponent(email))
                     .addGroup(paneltableLayout.createSequentialGroup()
-                        .addComponent(jLabel8)
+                        .addComponent(NameLabel)
                         .addGap(60, 60, 60)
-                        .addComponent(jLabel6)
+                        .addComponent(AgeLabel)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel7)))
+                        .addComponent(emailLabel)))
                 .addGap(58, 58, 58)
                 .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4)
-                    .addComponent(jButton3)
-                    .addComponent(jButton5))
+                    .addComponent(deleteDoctor)
+                    .addComponent(AddDoctor)
+                    .addComponent(UpdateDoctor))
                 .addGap(49, 49, 49))
         );
 
@@ -223,28 +236,34 @@ public class CheckupAdminPanel extends javax.swing.JPanel {
     private void UserTablejTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserTablejTable1MouseClicked
         // TODO add your handling code here:
         // 543209r453e2wq1  ac]4UserTable.setVisible(false);
+        CheckupLabel.setVisible(false);
+         addVitals panel = new addVitals();
+        container.add("ManageEnterpriseJPanel", panel);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.next(container);
+        paneltable.setVisible(false);   
         
     }//GEN-LAST:event_UserTablejTable1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton AddDoctor;
+    private javax.swing.JLabel Age;
+    private javax.swing.JLabel AgeLabel;
     private javax.swing.JLabel CheckupLabel;
+    private javax.swing.JLabel Name;
+    private javax.swing.JLabel NameLabel;
+    private javax.swing.JLabel PatID;
+    private javax.swing.JLabel Phone;
+    private javax.swing.JLabel PhoneLabel;
+    private javax.swing.JButton UpdateDoctor;
     private javax.swing.JTable UserTable;
-    private javax.swing.JLabel caseID2;
-    private javax.swing.JLabel caseIDinput2;
     private javax.swing.JPanel container;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JButton deleteDoctor;
+    private javax.swing.JLabel email;
+    private javax.swing.JLabel emailLabel;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JPanel paneltable;
+    private javax.swing.JLabel patientidinput;
     // End of variables declaration//GEN-END:variables
 }
