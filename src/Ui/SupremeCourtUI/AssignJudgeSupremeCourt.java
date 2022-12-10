@@ -34,6 +34,7 @@ public class AssignJudgeSupremeCourt extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         AssignJudgeSupreme = new javax.swing.JTable();
+        btnBack = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
         jLabel1.setText("Assign Judge");
@@ -98,11 +99,16 @@ public class AssignJudgeSupremeCourt extends javax.swing.JPanel {
                 .addContainerGap(140, Short.MAX_VALUE))
         );
 
+        btnBack.setText("Back");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 722, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(576, Short.MAX_VALUE)
+                .addComponent(btnBack)
+                .addGap(88, 88, 88))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 68, Short.MAX_VALUE)
@@ -111,7 +117,10 @@ public class AssignJudgeSupremeCourt extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 545, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(419, Short.MAX_VALUE)
+                .addComponent(btnBack)
+                .addGap(102, 102, 102))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -123,6 +132,7 @@ public class AssignJudgeSupremeCourt extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable AssignJudgeSupreme;
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton jButton1;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;

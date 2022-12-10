@@ -29,6 +29,7 @@ public class HighCourtViewCases extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         HighCourtTable = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
 
         HighCourtTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -46,6 +47,8 @@ public class HighCourtViewCases extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setText("HIGH COURT CASES");
 
+        btnBack.setText("Back");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -57,7 +60,9 @@ public class HighCourtViewCases extends javax.swing.JPanel {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(227, 227, 227))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnBack)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 528, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(95, 95, 95))))
         );
         layout.setVerticalGroup(
@@ -67,13 +72,16 @@ public class HighCourtViewCases extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addGap(82, 82, 82)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addGap(55, 55, 55)
+                .addComponent(btnBack)
+                .addContainerGap(95, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable HighCourtTable;
+    private javax.swing.JButton btnBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
