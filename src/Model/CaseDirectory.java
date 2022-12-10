@@ -14,26 +14,35 @@ import javax.swing.table.DefaultTableModel;
  */
 
 public class CaseDirectory extends organization {
-    Case cases;
-    public static ArrayList<Case> caseList;
-        public CaseDirectory(){
-            caseList=new ArrayList<Case>();
+   
+    private ArrayList<Case> caseList;
+        
+    public CaseDirectory(){
+        this.caseList=new ArrayList<Case>();
         }
 
+    public ArrayList<Case> getCaseList() {
+        return caseList;
+    }
+
+    public void setUserList(ArrayList<Case> caseList) {
+        this.caseList = caseList;
+    }
+
+    
+    
         public ArrayList<Case> displayCase(){
             return caseList;
         }
         
         public Case createCase(Case cases){
-           System.out.println(cases.getName());
-          caseList.add(cases);
+           //System.out.println(app.getName());
+          this.caseList.add(cases);
           return cases;
-          
         }
         public void removeRecord(Case cases){
         caseList.remove(cases);
 }
-
 }
 
     

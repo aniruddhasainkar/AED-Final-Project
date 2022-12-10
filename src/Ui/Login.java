@@ -178,8 +178,8 @@ public class Login extends javax.swing.JPanel {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        //login.setVisible(false);
-        //container.setVisible(true);
+        login.setVisible(false);
+        container.setVisible(true);
         UserJPanel panel=new UserJPanel();
         container.add("workArea", panel);
         CardLayout layout = (CardLayout) container.getLayout();

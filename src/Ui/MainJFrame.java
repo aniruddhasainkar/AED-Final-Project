@@ -8,6 +8,7 @@ import Business.Ecosystem;
 import static java.time.Clock.system;
 
 import DB4OUtil.DB4OUtil;
+import DB4OUtil.Person;
 import java.awt.CardLayout;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -17,15 +18,27 @@ import javax.swing.JOptionPane;
  * @author aniruddhasainkar
  */
 public class MainJFrame extends javax.swing.JFrame {
-     private Ecosystem system;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     /**
      * Creates new form MainJFrame
      */
     public MainJFrame() {
         initComponents();
-        system = dB4OUtil.retrieveSystem();
-        Ecosystem.setInstance(system);
+        System.out.println("system is null");
+        Ecosystem ecoSystem = new Ecosystem();
+        ecoSystem.setPerson(new Person("nagesh"));
+        dB4OUtil.storeSystem(ecoSystem);
+        
+        
+        System.out.println(ecoSystem);
+        
+         Ecosystem retreived = dB4OUtil.retrieveSystem();
+         
+         System.out.print(retreived.getPerson().getName());
+         
+          dB4OUtil.storeSystem(ecoSystem);
+        
+       
 //        register.setVisible(false);
 //        login.setVisible(true);
 //        container.setVisible(false);
@@ -130,6 +143,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         Login log = new Login();
+        welcome.setRightComponent(log);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

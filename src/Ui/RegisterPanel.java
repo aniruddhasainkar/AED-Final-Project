@@ -23,7 +23,7 @@ private Ecosystem system;
     public RegisterPanel() {
         initComponents();
         system = dB4OUtil.retrieveSystem();
-        Ecosystem.setInstance(system);
+//        Ecosystem.setInstance(system);
     }
 
     /**
@@ -170,10 +170,10 @@ private Ecosystem system;
         newUser.setUserName(username);
         newUser.setPassword(password);
         newUser.setUserType(usertype);
-        system.getUserDirectory().createCase(newUser);
-        dB4OUtil.storeSystem(system);
-        //Ecosystem.setInstance(system);
-        system = dB4OUtil.retrieveSystem();
+//        system.getUserDirectory().createCase(newUser);
+//        dB4OUtil.storeSystem(system);
+//        Ecosystem.setInstance(system);
+//        system = dB4OUtil.retrieveSystem();
         //container.setVisible(true);
         //f=new JFrame();
         JOptionPane.showMessageDialog(null,"User Registered");
