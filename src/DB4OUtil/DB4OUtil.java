@@ -1,6 +1,6 @@
 package DB4OUtil;
 import Business.Ecosystem;
-import Model.UserDirectory;
+import Model.Users.UserDirectory;
 import Business.ConfigureAdmin;
 import com.db4o.Db4oEmbedded;
 import com.db4o.ObjectContainer;

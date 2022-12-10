@@ -4,6 +4,10 @@
  */
 package Ui;
 
+import Ui.CriminalUI.CriminalOrganization;
+import Ui.CorporateUI.CorporateOrganization;
+import Ui.CivilUI.CivilOrganization;
+
 /**
  *
  * @author keerthanaakannan
