@@ -9,11 +9,12 @@ import Ui.UserandPoliceUI.Login;
 import Business.Ecosystem;
 import static java.time.Clock.system;
 
-import DB4OUtil.DB4OUtil;
-import DB4OUtil.Person;
+//import DB4OUtil.DB4OUtil;
+//import DB4OUtil.Person;
 import Ui.UserandPoliceUI.Login;
 import Ui.UserandPoliceUI.RegisterPanel;
 import java.awt.CardLayout;
+import java.awt.Dimension;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -152,6 +153,8 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        welcome.getLeftComponent().setMinimumSize(new Dimension());
+         welcome.setDividerLocation(0.0d);
         try {
             // TODO add your handling code here:
             Login log = new Login();

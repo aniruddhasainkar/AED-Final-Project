@@ -169,6 +169,7 @@ public class Login extends javax.swing.JPanel {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         try {
             // TODO add your handling code here:
+            
             String username=txtUsername.getText();
             String password=String.valueOf(txtPassword.getPassword());
             String query = "SELECT * FROM public.\"User\" WHERE \"Username\"='"+ username +"';";
@@ -183,17 +184,33 @@ public class Login extends javax.swing.JPanel {
                 if(username.equals(rs.getString(1)) && password.equals(rs.getString(2)))
                 {
                     this.usertype = rs.getString(3);
-                    System.out.println("44444444444");
+                    //System.out.println("44444444444");
                     System.out.println(this.usertype);
                     if(this.usertype.equals("User"))
                     {
-                    System.out.println("55555555555");
+                    //System.out.println("55555555555");
                     login.setVisible(false);
                     container.setVisible(true);
                     UserJPanel panel=new UserJPanel();
                     container.add("workArea", panel);
                     CardLayout layout = (CardLayout) container.getLayout();
                     layout.next(container);
+                    }
+                    else if (this.usertype.equals("Police")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        PoliceJPanel policepanel = new PoliceJPanel();
+                        container.add("workArea", policepanel);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                    else if (this.usertype.equals("Prison")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        PrisonJPanel prisonpanel = new PrisonJPanel();
+                        container.add("workArea", prisonpanel);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
                     }
                 }
                 else{
