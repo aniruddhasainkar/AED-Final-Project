@@ -9,11 +9,15 @@ import Ui.UserandPoliceUI.Login;
 import Business.Ecosystem;
 import static java.time.Clock.system;
 
-import DB4OUtil.DB4OUtil;
-import DB4OUtil.Person;
+//import DB4OUtil.DB4OUtil;
+//import DB4OUtil.Person;
 import Ui.UserandPoliceUI.Login;
 import Ui.UserandPoliceUI.RegisterPanel;
 import java.awt.CardLayout;
+import java.awt.Dimension;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -22,7 +26,7 @@ import javax.swing.JOptionPane;
  * @author aniruddhasainkar
  */
 public class MainJFrame extends javax.swing.JFrame {
-     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    // private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     /**
      * Creates new form MainJFrame
      */
@@ -30,17 +34,17 @@ public class MainJFrame extends javax.swing.JFrame {
         initComponents();
         System.out.println("system is null");
         Ecosystem ecoSystem = new Ecosystem();
-        ecoSystem.setPerson(new Person("nagesh"));
-        dB4OUtil.storeSystem(ecoSystem);
+        //ecoSystem.setPerson(new Person("nagesh"));
+      //  dB4OUtil.storeSystem(ecoSystem);
         
         
         System.out.println(ecoSystem);
         
-         Ecosystem retreived = dB4OUtil.retrieveSystem();
+       //  Ecosystem retreived = dB4OUtil.retrieveSystem();
          
-         System.out.print(retreived.getPerson().getName());
+        // System.out.print(retreived.getPerson().getName());
          
-          dB4OUtil.storeSystem(ecoSystem);
+       //   dB4OUtil.storeSystem(ecoSystem);
         
        
 //        register.setVisible(false);
@@ -138,16 +142,26 @@ public class MainJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        RegisterPanel panel = new RegisterPanel();
-        welcome.setRightComponent(panel);
+         try {
+             // TODO add your handling code here:
+             RegisterPanel panel = new RegisterPanel();
+             welcome.setRightComponent(panel);
+         } catch (SQLException ex) {
+             Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        Login log = new Login();
-        welcome.setRightComponent(log);
+        welcome.getLeftComponent().setMinimumSize(new Dimension());
+         welcome.setDividerLocation(0.0d);
+        try {
+            // TODO add your handling code here:
+            Login log = new Login();
+            welcome.setRightComponent(log);
+        } catch (SQLException ex) {
+            Logger.getLogger(MainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_jButton2ActionPerformed
 

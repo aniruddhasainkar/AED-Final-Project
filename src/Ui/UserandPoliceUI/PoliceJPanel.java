@@ -37,6 +37,9 @@ public class PoliceJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
 
+        Policepane.setName(""); // NOI18N
+        Policepane.setPreferredSize(new java.awt.Dimension(1300, 797));
+
         jPanel1.setBackground(new java.awt.Color(2, 33, 105));
 
         btnCreatecaseuser.setText("Create Case");
@@ -105,11 +108,11 @@ public class PoliceJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Policepane)
+            .addComponent(Policepane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Policepane)
+            .addComponent(Policepane, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

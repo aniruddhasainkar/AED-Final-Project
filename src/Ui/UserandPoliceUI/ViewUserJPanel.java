@@ -47,6 +47,7 @@ public class ViewUserJPanel extends javax.swing.JPanel {
         jComboBox4 = new javax.swing.JComboBox<>();
         caseID2 = new javax.swing.JLabel();
         caseIDinput2 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
         container = new javax.swing.JPanel();
 
         UserTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -110,13 +111,15 @@ public class ViewUserJPanel extends javax.swing.JPanel {
 
         caseID2.setText("Case ID:");
 
+        btnBack.setText("Back");
+
         javax.swing.GroupLayout paneltableLayout = new javax.swing.GroupLayout(paneltable);
         paneltable.setLayout(paneltableLayout);
         paneltableLayout.setHorizontalGroup(
             paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(paneltableLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(paneltableLayout.createSequentialGroup()
                         .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,7 +139,10 @@ public class ViewUserJPanel extends javax.swing.JPanel {
                             .addComponent(txtNameuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtAgeuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtEmailuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtPhoneuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(paneltableLayout.createSequentialGroup()
+                                .addComponent(txtPhoneuser2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnBack)))))
                 .addContainerGap(183, Short.MAX_VALUE))
         );
         paneltableLayout.setVerticalGroup(
@@ -163,11 +169,12 @@ public class ViewUserJPanel extends javax.swing.JPanel {
                 .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel28)
                     .addComponent(txtEmailuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24)
+                .addGap(21, 21, 21)
                 .addGroup(paneltableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel31)
-                    .addComponent(txtPhoneuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(126, 126, 126))
+                    .addComponent(txtPhoneuser2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnBack))
+                .addGap(123, 123, 123))
         );
 
         container.setLayout(new java.awt.CardLayout());
@@ -226,6 +233,7 @@ public class ViewUserJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable UserTable;
+    private javax.swing.JButton btnBack;
     private javax.swing.JLabel caseID2;
     private javax.swing.JLabel caseIDinput2;
     private javax.swing.JPanel container;

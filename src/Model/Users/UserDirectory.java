@@ -13,32 +13,42 @@ import organization.organization;
  */
 public class UserDirectory extends organization {
    
-    private ArrayList<User> userList;
-        
-    public UserDirectory(){
-        this.userList=new ArrayList<User>();
-        }
+     private ArrayList<User> userList;
+
+    public UserDirectory() {
+        userList = new ArrayList();
+    }
 
     public ArrayList<User> getUserList() {
         return userList;
     }
-
-    public void setUserList(ArrayList<User> userList) {
-        this.userList = userList;
+     public void setUserList(User ua) {
+        userList.add(ua);
     }
-
     
+    public User authenticateUser(String username, String password,String usertype){
+        for (User ua : userList)
+            if (ua.getUserName().equals(username) && ua.getPassword().equals(password) && ua.getUserType().equals(usertype)){
+                return ua;
+            }
+        return null;
+    }
     
-        public ArrayList<User> displayCase(){
-            return userList;
+    public User createUserAccount(String username, String password, String usertype){
+        User userAccount = new User();
+        userAccount.setUserName(username);
+        userAccount.setPassword(password);
+        userAccount.setUserType(usertype);
+//        userAccount.setRole(role);
+//        userAccountList.add(userAccount);
+        return userAccount;
+    }
+    
+    public boolean checkIfUsernameIsUnique(String username){
+        for (User ua : userList){
+            if (ua.getUserName().equals(username))
+                return false;
         }
-        
-        public User createCase(User user){
-           //System.out.println(app.getName());
-          this.userList.add(user);
-          return user;
-        }
-        public void removeRecord(User users){
-        userList.remove(users);
-}
+        return true;
+    }
 }

@@ -4,8 +4,13 @@
  */
 package Ui.UserandPoliceUI;
 
+import SQL_Connection.SQL_Connect;
 import Ui.UserandPoliceUI.UserJPanel;
 import java.awt.CardLayout;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,8 +21,11 @@ public class Login extends javax.swing.JPanel {
     /**
      * Creates new form Login
      */
-    public Login() {
+    SQL_Connect sqlConnect;
+    String usertype;
+    public Login() throws SQLException {
         initComponents();
+        this.sqlConnect = new SQL_Connect();
     }
 
     /**
@@ -36,9 +44,7 @@ public class Login extends javax.swing.JPanel {
         lblPass = new javax.swing.JLabel();
         txtUsername = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
-        lblPass1 = new javax.swing.JLabel();
         txtPassword = new javax.swing.JPasswordField();
-        comboDropuser = new javax.swing.JComboBox<>();
         container = new javax.swing.JPanel();
 
         login.setBackground(new java.awt.Color(0, 0, 102));
@@ -78,17 +84,6 @@ public class Login extends javax.swing.JPanel {
             }
         });
 
-        lblPass1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPass1.setForeground(new java.awt.Color(255, 255, 255));
-        lblPass1.setText("Role");
-
-        comboDropuser.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Lawyer", "Judge" }));
-        comboDropuser.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboDropuserActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout loginLayout = new javax.swing.GroupLayout(login);
         login.setLayout(loginLayout);
         loginLayout.setHorizontalGroup(
@@ -99,13 +94,11 @@ public class Login extends javax.swing.JPanel {
                         .addGap(498, 498, 498)
                         .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblUsername)
-                            .addComponent(lblPass)
-                            .addComponent(lblPass1))
+                            .addComponent(lblPass))
                         .addGap(31, 31, 31)
                         .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUsername)
-                            .addComponent(txtPassword)
-                            .addComponent(comboDropuser, 0, 107, Short.MAX_VALUE)))
+                            .addComponent(txtUsername, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                            .addComponent(txtPassword)))
                     .addGroup(loginLayout.createSequentialGroup()
                         .addGap(552, 552, 552)
                         .addComponent(jLabel1))
@@ -130,13 +123,9 @@ public class Login extends javax.swing.JPanel {
                 .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPass)
                     .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblPass1)
-                    .addComponent(comboDropuser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(68, 68, 68)
+                .addGap(107, 107, 107)
                 .addComponent(btnLogin)
-                .addContainerGap(374, Short.MAX_VALUE))
+                .addContainerGap(376, Short.MAX_VALUE))
         );
 
         container.setLayout(new java.awt.CardLayout());
@@ -178,29 +167,74 @@ public class Login extends javax.swing.JPanel {
     }//GEN-LAST:event_txtUsernameActionPerformed
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        // TODO add your handling code here:
-        login.setVisible(false);
-        container.setVisible(true);
-        UserJPanel panel=new UserJPanel();
-        container.add("workArea", panel);
-        CardLayout layout = (CardLayout) container.getLayout();
-        layout.next(container);
+        try {
+            // TODO add your handling code here:
+            
+            String username=txtUsername.getText();
+            String password=String.valueOf(txtPassword.getPassword());
+            String query = "SELECT * FROM public.\"User\" WHERE \"Username\"='"+ username +"';";
+            java.sql.Statement stat = sqlConnect.retStatement();
+            java.sql.ResultSet rs = stat.executeQuery(query);
+            int i=0;
+            System.out.println("1111111111");
+            while(rs.next())
+            {
+                System.out.println("2222222222");
+                i=i+1;
+                if(username.equals(rs.getString(1)) && password.equals(rs.getString(2)))
+                {
+                    this.usertype = rs.getString(3);
+                    //System.out.println("44444444444");
+                    System.out.println(this.usertype);
+                    if(this.usertype.equals("User"))
+                    {
+                    //System.out.println("55555555555");
+                    login.setVisible(false);
+                    container.setVisible(true);
+                    UserJPanel panel=new UserJPanel();
+                    container.add("workArea", panel);
+                    CardLayout layout = (CardLayout) container.getLayout();
+                    layout.next(container);
+                    }
+                    else if (this.usertype.equals("Police")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        PoliceJPanel policepanel = new PoliceJPanel();
+                        container.add("workArea", policepanel);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                    else if (this.usertype.equals("Prison")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        PrisonJPanel prisonpanel = new PrisonJPanel();
+                        container.add("workArea", prisonpanel);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(null,"Password is wrong");
+                }
+            }
+            System.out.println(i);
+            System.out.println("3333333333");
+            if(i==0){
+                JOptionPane.showMessageDialog(null,"Username is wrong");
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
     }//GEN-LAST:event_btnLoginActionPerformed
-
-    private void comboDropuserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboDropuserActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboDropuserActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
-    private javax.swing.JComboBox<String> comboDropuser;
     private javax.swing.JPanel container;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel lblPass;
-    private javax.swing.JLabel lblPass1;
     private javax.swing.JLabel lblUsername;
     private javax.swing.JPanel login;
     private javax.swing.JPasswordField txtPassword;

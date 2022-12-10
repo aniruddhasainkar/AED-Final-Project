@@ -4,10 +4,15 @@
  */
 package Ui.UserandPoliceUI;
 
-import DB4OUtil.DB4OUtil;
+//import DB4OUtil.DB4OUtil;
 import Business.Ecosystem;
 import Model.Users.User;
+import Model.Users.UserDirectory;
+import SQL_Connection.SQL_Connect;
+import java.sql.SQLException;
 import static java.time.Clock.system;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -16,13 +21,15 @@ import javax.swing.JOptionPane;
  */
 public class RegisterPanel extends javax.swing.JPanel {
 private Ecosystem system;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    //private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     /**
      * Creates new form RegisterPanel
      */
-    public RegisterPanel() {
+    SQL_Connect sqlConnect;
+    public RegisterPanel() throws SQLException {
         initComponents();
-        system = dB4OUtil.retrieveSystem();
+        //system = dB4OUtil.retrieveSystem();
+        this.sqlConnect = new SQL_Connect();
 //        Ecosystem.setInstance(system);
     }
 
@@ -49,7 +56,7 @@ private Ecosystem system;
         jLabel2.setText("REGISTER");
 
         lblUsername1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblUsername1.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsername1.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername1.setText("Username:");
 
         UserTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -59,14 +66,14 @@ private Ecosystem system;
         });
 
         lblPass2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPass2.setForeground(new java.awt.Color(255, 255, 255));
+        lblPass2.setForeground(new java.awt.Color(0, 0, 0));
         lblPass2.setText("Password:");
 
         lblPass3.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPass3.setForeground(new java.awt.Color(255, 255, 255));
+        lblPass3.setForeground(new java.awt.Color(0, 0, 0));
         lblPass3.setText("Role");
 
-        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Lawyer", "Judge" }));
+        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Prison", "LawFirmAdmin", "LawFirmManager", "HospAdmin", "Doctor", "Lawyer", "DistrictCourtJudge", "HighCourtJudge", "SupremeJudge" }));
         type.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 typeActionPerformed(evt);
@@ -162,14 +169,24 @@ private Ecosystem system;
         // TODO add your handling code here:
         //login.setVisible(false);
         //register.setVisible(true);
+        UserDirectory userDir=new UserDirectory();
+//        User user=new User();
         String username=UserTxt.getText();
-        String password=UserPassword.getText();
+        String password=String.valueOf(UserPassword.getPassword());
         String usertype=(String) type.getSelectedItem();
-        User newUser= new User();
-       
-        newUser.setUserName(username);
-        newUser.setPassword(password);
-        newUser.setUserType(usertype);
+        String query = "INSERT INTO public.\"User\"(\"Username\",\"Password\",\"Usertype\")\n" +
+                       "VALUES ('"+ username + "','"+ password + "','"+ usertype +"');";
+        java.sql.Statement stat = sqlConnect.retStatement();
+    try {
+        stat.execute(query);
+    } catch (SQLException ex) {
+        Logger.getLogger(RegisterPanel.class.getName()).log(Level.SEVERE, null, ex);
+    }
+        User user=userDir.createUserAccount(username, password, usertype);
+        userDir.setUserList(user);
+//        newUser.setUserName(username);
+//        newUser.setPassword(password);
+//        newUser.setUserType(usertype);
 //        system.getUserDirectory().createCase(newUser);
 //        dB4OUtil.storeSystem(system);
 //        Ecosystem.setInstance(system);
