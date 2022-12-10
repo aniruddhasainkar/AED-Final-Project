@@ -212,11 +212,13 @@ public class ViewUserJPanel extends javax.swing.JPanel {
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
         // TODO add your handling code here:
         // 543209r453e2wq1  ac]4UserTable.setVisible(false);
+         container.setVisible(true);
+          paneltable.setVisible(false);
          ViewIndividualProfileJPanel panel = new ViewIndividualProfileJPanel();
         container.add("ManageEnterpriseJPanel", panel);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.next(container);
-        paneltable.setVisible(false);     
+        //paneltable.setVisible(false);     
 
     }//GEN-LAST:event_jTable1MouseClicked
 

@@ -62,9 +62,9 @@ public class DB4OUtil {
     public Ecosystem retrieveSystem(){
         
         ObjectContainer conn = createConnection();
-        System.out.println("11111111");
+        //System.out.println("11111111");
         ObjectSet<Ecosystem> systems = conn.query(Ecosystem.class); // Change to the object you want to save
-        System.out.println("2222222222");
+        //System.out.println("2222222222");
         Ecosystem system;
         if (systems.size() == 0){
             system = ConfigureAdmin.configure();  // If there's no System in the record, create a new one
@@ -72,7 +72,7 @@ public class DB4OUtil {
         else{
             system = systems.get(systems.size() - 1);
         }
-        System.out.println("3333333333");
+        //System.out.println("3333333333");
         conn.close();
         return system;
     }
