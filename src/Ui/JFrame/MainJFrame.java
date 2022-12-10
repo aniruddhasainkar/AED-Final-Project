@@ -9,7 +9,7 @@ import Ui.UserandPoliceUI.Login;
 import Business.Ecosystem;
 import static java.time.Clock.system;
 
-import DB4OUtil.DB4OUtil;
+//import DB4OUtil.DB4OUtil;
 import DB4OUtil.Person;
 import Ui.UserandPoliceUI.Login;
 import Ui.UserandPoliceUI.RegisterPanel;
@@ -22,7 +22,7 @@ import javax.swing.JOptionPane;
  * @author aniruddhasainkar
  */
 public class MainJFrame extends javax.swing.JFrame {
-     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+ //    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     /**
      * Creates new form MainJFrame
      */
@@ -31,16 +31,16 @@ public class MainJFrame extends javax.swing.JFrame {
         System.out.println("system is null");
         Ecosystem ecoSystem = new Ecosystem();
         ecoSystem.setPerson(new Person("nagesh"));
-        dB4OUtil.storeSystem(ecoSystem);
+     //   dB4OUtil.storeSystem(ecoSystem);
         
         
         System.out.println(ecoSystem);
         
-         Ecosystem retreived = dB4OUtil.retrieveSystem();
+     //    Ecosystem retreived = dB4OUtil.retrieveSystem();
          
-         System.out.print(retreived.getPerson().getName());
+     //    System.out.print(retreived.getPerson().getName());
          
-          dB4OUtil.storeSystem(ecoSystem);
+     //     dB4OUtil.storeSystem(ecoSystem);
         
        
 //        register.setVisible(false);
