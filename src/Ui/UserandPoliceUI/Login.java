@@ -183,7 +183,7 @@ public class Login extends javax.swing.JPanel {
                 i=i+1;
                 if(username.equals(rs.getString(1)) && password.equals(rs.getString(2)))
                 {
-                    this.usertype = rs.getString(4);
+                    this.usertype = rs.getString(3);
                     //System.out.println("44444444444");
                     System.out.println(this.usertype);
                     if(this.usertype.equals("User"))
