@@ -15,6 +15,7 @@ public class DoctorPanel extends javax.swing.JPanel {
     /**
      * Creates new form CheckupAdminPanel
      */
+    //commit the data
     public DoctorPanel() {
         initComponents();
         PatID.setVisible(false);

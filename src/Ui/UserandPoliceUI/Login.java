@@ -4,6 +4,8 @@
  */
 package Ui.UserandPoliceUI;
 
+import Model.CaseDirectory;
+import static Model.CaseDirectory.caseList;
 import Ui.UserandPoliceUI.UserJPanel;
 import java.awt.CardLayout;
 

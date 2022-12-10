@@ -4,6 +4,10 @@
  */
 package Ui.UserandPoliceUI;
 
+import Model.Case;
+import Model.CaseDirectory;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author aniruddhasainkar
@@ -13,9 +17,14 @@ public class ViewPoliceCaseJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ViewPoliceCaseJPanel
      */
-    public ViewPoliceCaseJPanel() {
+     CaseDirectory caseList=new CaseDirectory();
+     
+   
+    
+   public ViewPoliceCaseJPanel() {
         initComponents();
-    }
+          populateTable();
+   }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,10 +36,10 @@ public class ViewPoliceCaseJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblCases = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblCases.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
                 {null, null, null, null, null, null, null},
@@ -41,7 +50,7 @@ public class ViewPoliceCaseJPanel extends javax.swing.JPanel {
                 "Case ID", "Name", "Age", "Email ", "Phone No", "Case Type", "Status"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblCases);
 
         btnBack.setText("Back");
 
@@ -71,6 +80,41 @@ public class ViewPoliceCaseJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tblCases;
     // End of variables declaration//GEN-END:variables
+
+ private void populateTable() {
+        
+        DefaultTableModel model = (DefaultTableModel) tblCases.getModel();
+        
+        model.setRowCount(0);
+        
+        for (Case vs :caseList.displayCase()){
+            
+            Object[] row = new Object[4];
+            
+            row[0]=vs.getCaseID();
+            row[1]=vs.getName();
+            row[2]=vs.getAge();
+            row[3]=vs.getEmail();
+            row[4]=vs.getPhone();
+            row[5]=vs.getCaseType();
+            row[6]=vs.getStatus();
+           
+            
+            
+            model.addRow(row);
+            
+            
+        }
+        
+        
+
+    }
+
+    
+
+    private void addRow(Object[] row) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

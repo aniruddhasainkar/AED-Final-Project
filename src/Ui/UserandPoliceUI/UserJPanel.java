@@ -4,6 +4,7 @@
  */
 package Ui.UserandPoliceUI;
 
+import Model.CaseDirectory;
 import Ui.UserandPoliceUI.ViewUserJPanel;
 import Ui.LawyerUI.ViewAppointmentJPanel;
 
@@ -16,9 +17,12 @@ public class UserJPanel extends javax.swing.JPanel {
     /**
      * Creates new form UserJPanel
      */
-    public UserJPanel() {
-        initComponents();
-    }
+    CaseDirectory caseList=new CaseDirectory();
+//    public UserJPanel(CaseDirectory caseList) {
+//        initComponents();
+//        
+//        caseList= new CaseDirectory();
+//    }
 
     /**
      * This method is called from within the constructor to initialize the form.
