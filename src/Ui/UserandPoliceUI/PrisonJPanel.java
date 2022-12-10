@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package Ui.Prison;
+package Ui.UserandPoliceUI;
 
 /**
  *
  * @author aniruddhasainkar
  */
-public class Prison extends javax.swing.JPanel {
+public class PrisonJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form Prison
      */
-    public Prison() {
+    public PrisonJPanel() {
         initComponents();
     }
 

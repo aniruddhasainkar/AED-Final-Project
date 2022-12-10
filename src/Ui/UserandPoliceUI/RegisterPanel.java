@@ -4,7 +4,7 @@
  */
 package Ui.UserandPoliceUI;
 
-import DB4OUtil.DB4OUtil;
+//import DB4OUtil.DB4OUtil;
 import Business.Ecosystem;
 import Model.Users.User;
 import Model.Users.UserDirectory;
@@ -56,7 +56,7 @@ private Ecosystem system;
         jLabel2.setText("REGISTER");
 
         lblUsername1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblUsername1.setForeground(new java.awt.Color(255, 255, 255));
+        lblUsername1.setForeground(new java.awt.Color(0, 0, 0));
         lblUsername1.setText("Username:");
 
         UserTxt.addActionListener(new java.awt.event.ActionListener() {
@@ -66,14 +66,14 @@ private Ecosystem system;
         });
 
         lblPass2.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPass2.setForeground(new java.awt.Color(255, 255, 255));
+        lblPass2.setForeground(new java.awt.Color(0, 0, 0));
         lblPass2.setText("Password:");
 
         lblPass3.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
-        lblPass3.setForeground(new java.awt.Color(255, 255, 255));
+        lblPass3.setForeground(new java.awt.Color(0, 0, 0));
         lblPass3.setText("Role");
 
-        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Lawyer", "Judge" }));
+        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Prison", "LawFirmAdmin", "LawFirmManager", "HospAdmin", "Doctor", "Lawyer", "DistrictCourtJudge", "HighCourtJudge", "SupremeJudge" }));
         type.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 typeActionPerformed(evt);
