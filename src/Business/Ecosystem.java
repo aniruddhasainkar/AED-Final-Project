@@ -5,7 +5,7 @@
 package Business;
 
 import DB4OUtil.Person;
-import Model.UserDirectory;
+import Model.Users.UserDirectory;
 import organization.organization;
 
 /**
