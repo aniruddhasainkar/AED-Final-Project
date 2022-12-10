@@ -14,7 +14,8 @@ import organization.organization;
  */
 public class Ecosystem {
     private static Ecosystem business;
-    private Person person;
+    //private Person person;
+    UserDirectory userList;
     
 
     public static Ecosystem getInstance(){
@@ -24,12 +25,19 @@ public class Ecosystem {
         return business;
     }
     
-    public void setPerson(Person p){
-        this.person = p;
-    }
-    
-    public Person getPerson(){
-       return this.person;
+//    public void setPerson(Person p){
+//        this.person = p;
+//    }
+//    
+//    public Person getPerson(){
+//       return this.person;
+//    }
+    public UserDirectory getUserDirectory(){
+        if(userList==null){
+            this.userList=new UserDirectory();
+            
+        }
+        return userList;
     }
     
     public static void setInstance(Ecosystem system) {

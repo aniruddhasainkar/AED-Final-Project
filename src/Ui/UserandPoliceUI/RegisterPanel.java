@@ -3,10 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package Ui.UserandPoliceUI;
-
-import DB4OUtil.DB4OUtil;
+import DB4OUtil.Db4util;
 import Business.Ecosystem;
 import Model.Users.User;
+import Model.Users.UserDirectory;
+import java.awt.CardLayout;
 import static java.time.Clock.system;
 import javax.swing.JOptionPane;
 
@@ -16,13 +17,13 @@ import javax.swing.JOptionPane;
  */
 public class RegisterPanel extends javax.swing.JPanel {
 private Ecosystem system;
-    private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
+    private Db4util db4util = Db4util.getInstance();
     /**
      * Creates new form RegisterPanel
      */
     public RegisterPanel() {
         initComponents();
-        system = dB4OUtil.retrieveSystem();
+        system = db4util.retrieveSystem();
 //        Ecosystem.setInstance(system);
     }
 
@@ -162,16 +163,45 @@ private Ecosystem system;
         // TODO add your handling code here:
         //login.setVisible(false);
         //register.setVisible(true);
+        UserDirectory userDir=new UserDirectory();
+        User user=new User();
         String username=UserTxt.getText();
-        String password=UserPassword.getText();
+        String password=String.valueOf(UserPassword.getPassword());
         String usertype=(String) type.getSelectedItem();
-        User newUser= new User();
-       
-        newUser.setUserName(username);
-        newUser.setPassword(password);
-        newUser.setUserType(usertype);
+        //user.createUserAccount(username,password,usertype);
+        user = userDir.authenticateUser(username, password,usertype);
+//        inEnterprise = null;
+//        inOrganization = null;
+//        networkEmergency = null;
+
+        if (user == null) {
+                    user = system.getUserDirectory().authenticateUser(username,password,usertype);
+                    
+//        
+//        if (user == null) {
+//            JOptionPane.showMessageDialog(null, "Invalid credentials");
+//            return;
+//        } else {
+////            logi.setVisible(false);
+////            container.setVisible(true);
+////            UpperPanel.setVisible(true);
+////            btnLogoutLabel.setVisible(true);
+//            //btnBackLabel.setVisible(false);
+//            UserTxt.setText("");
+//            password.setText("");
+//           
+//        }
+        }
+
+//        User newUser= new User();
+//       
+//        newUser.setUserName(username);
+//        newUser.setPassword(password);
+//        newUser.setUserType(usertype);
 //        system.getUserDirectory().createCase(newUser);
-//        dB4OUtil.storeSystem(system);
+          //
+          
+          db4util.storeSystem(system);
 //        Ecosystem.setInstance(system);
 //        system = dB4OUtil.retrieveSystem();
         //container.setVisible(true);
