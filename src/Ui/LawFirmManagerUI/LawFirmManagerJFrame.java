@@ -4,6 +4,10 @@
  */
 package Ui.LawFirmManagerUI;
 
+import Ui.IndividualProfileUI.ViewIndividualProfileJPanel;
+import Ui.UserandPoliceUI.ViewVictimProfileJPanel;
+import java.awt.CardLayout;
+
 /**
  *
  * @author aniruddhasainkar
@@ -26,14 +30,16 @@ public class LawFirmManagerJFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        managerPanel = new javax.swing.JPanel();
+        managerLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ManagerTable = new javax.swing.JTable();
+        container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
-        jLabel1.setText("Law Firm Manager");
+        managerLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
+        managerLabel.setText("Law Firm Manager");
 
         ManagerTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -46,34 +52,83 @@ public class LawFirmManagerJFrame extends javax.swing.JFrame {
                 "Case ID", "Name", "Age", "Email ", "Phone No", "Case Type", "Status"
             }
         ));
+        ManagerTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ManagerTableMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(ManagerTable);
+
+        javax.swing.GroupLayout managerPanelLayout = new javax.swing.GroupLayout(managerPanel);
+        managerPanel.setLayout(managerPanelLayout);
+        managerPanelLayout.setHorizontalGroup(
+            managerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 538, Short.MAX_VALUE)
+            .addGroup(managerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(managerPanelLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(managerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, managerPanelLayout.createSequentialGroup()
+                            .addComponent(managerLabel)
+                            .addGap(149, 149, 149))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+        managerPanelLayout.setVerticalGroup(
+            managerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 309, Short.MAX_VALUE)
+            .addGroup(managerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(managerPanelLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(managerLabel)
+                    .addGap(72, 72, 72)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+        );
+
+        container.setLayout(new java.awt.CardLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(88, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(227, 227, 227))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 526, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(78, 78, 78))))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(managerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(container, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(37, 37, 37)
-                .addComponent(jLabel1)
-                .addGap(72, 72, 72)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(162, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(managerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(container, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ManagerTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManagerTableMouseClicked
+        // TODO add your handling code here:
+        
+        container.setVisible(true);
+        managerPanel.setVisible(false);
+        ViewIndividualProfileJPanel victimprof=new ViewIndividualProfileJPanel();
+        container.add("workArea", victimprof);
+        CardLayout layout = (CardLayout) container.getLayout();
+        layout.next(container);
+        
+    }//GEN-LAST:event_ManagerTableMouseClicked
 
     /**
      * @param args the command line arguments
@@ -112,7 +167,9 @@ public class LawFirmManagerJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable ManagerTable;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel container;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel managerLabel;
+    private javax.swing.JPanel managerPanel;
     // End of variables declaration//GEN-END:variables
 }

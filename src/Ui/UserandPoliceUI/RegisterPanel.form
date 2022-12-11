@@ -154,7 +154,7 @@
         <Component class="javax.swing.JComboBox" name="type">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="11">
+              <StringArray count="12">
                 <StringItem index="0" value="User"/>
                 <StringItem index="1" value="Police"/>
                 <StringItem index="2" value="Prison"/>
@@ -163,9 +163,10 @@
                 <StringItem index="5" value="HospAdmin"/>
                 <StringItem index="6" value="Doctor"/>
                 <StringItem index="7" value="Lawyer"/>
-                <StringItem index="8" value="DistrictCourtJudge"/>
-                <StringItem index="9" value="HighCourtJudge"/>
-                <StringItem index="10" value="SupremeJudge"/>
+                <StringItem index="8" value="CourtAdmin"/>
+                <StringItem index="9" value="DistrictCourtJudge"/>
+                <StringItem index="10" value="HighCourtJudge"/>
+                <StringItem index="11" value="SupremeJudge"/>
               </StringArray>
             </Property>
           </Properties>

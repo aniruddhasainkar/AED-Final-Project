@@ -24,6 +24,7 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
     JFrame f;  
     public ViewIndividualProfileJPanel() {
         initComponents();
+         
         
     }
 
@@ -60,7 +61,7 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        assignInv = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
@@ -156,12 +157,12 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
 
         jLabel17.setText("jLabel17");
 
-        jButton3.setBackground(new java.awt.Color(2, 33, 105));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Assign to Investigation");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        assignInv.setBackground(new java.awt.Color(2, 33, 105));
+        assignInv.setForeground(new java.awt.Color(255, 255, 255));
+        assignInv.setText("Assign to Investigation");
+        assignInv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                assignInvActionPerformed(evt);
             }
         });
 
@@ -252,7 +253,7 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(145, 145, 145)
-                        .addComponent(jButton3))
+                        .addComponent(assignInv))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(158, 158, 158)
                         .addComponent(jButton6)))
@@ -288,7 +289,7 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel13)
                     .addComponent(jLabel16))
                 .addGap(52, 52, 52)
-                .addComponent(jButton3)
+                .addComponent(assignInv)
                 .addGap(18, 18, 18)
                 .addComponent(jButton6)
                 .addGap(18, 18, 18)
@@ -358,7 +359,7 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
         victimProfile.setRightComponent(vicMed);
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void assignInvActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignInvActionPerformed
         // TODO add your handling code here:
         InvestigationSummaryJPanel viewInv = new  InvestigationSummaryJPanel();
         //victimProfile.setRightComponent(viewInv);
@@ -368,13 +369,13 @@ public class ViewIndividualProfileJPanel extends javax.swing.JPanel {
         layout.next(vicProfContainer);
         victimProfile.setVisible(false);
         
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_assignInvActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton assignInv;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
