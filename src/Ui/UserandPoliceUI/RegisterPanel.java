@@ -73,7 +73,7 @@ private Ecosystem system;
         lblPass3.setForeground(new java.awt.Color(0, 0, 0));
         lblPass3.setText("Role");
 
-        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Prison", "LawFirmAdmin", "LawFirmManager", "HospAdmin", "Doctor", "Lawyer", "DistrictCourtJudge", "HighCourtJudge", "SupremeJudge" }));
+        type.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "User", "Police", "Prison", "LawFirmAdmin", "LawFirmManager", "HospAdmin", "Doctor", "Lawyer", "CourtAdmin", "DistrictCourtJudge", "HighCourtJudge", "SupremeJudge" }));
         type.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 typeActionPerformed(evt);

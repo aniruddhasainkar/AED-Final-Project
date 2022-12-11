@@ -5,6 +5,10 @@
 package Ui.UserandPoliceUI;
 
 import SQL_Connection.SQL_Connect;
+import Ui.CourtAdmin;
+import Ui.LawFirmAdminUI;
+import Ui.LawFirmManagerUI.LawFirmManagerJFrame;
+import Ui.LawyerUI.LawyerJPanel;
 import Ui.UserandPoliceUI.UserJPanel;
 import java.awt.CardLayout;
 import java.sql.SQLException;
@@ -209,6 +213,38 @@ public class Login extends javax.swing.JPanel {
                         container.setVisible(true);
                         PrisonJPanel prisonpanel = new PrisonJPanel();
                         container.add("workArea", prisonpanel);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                    else if (this.usertype.equals("LawFirmAdmin")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        LawFirmAdminUI lawfirm = new LawFirmAdminUI();
+                        container.add("workArea", lawfirm);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                     else if (this.usertype.equals("LawFirmManager")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        LawFirmManagerJFrame lawfirm = new LawFirmManagerJFrame ();
+                        container.add("workArea", lawfirm);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                    else if (this.usertype.equals("Lawyer")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        LawyerJPanel lawyer = new LawyerJPanel();
+                        container.add("workArea", lawyer);
+                        CardLayout layout = (CardLayout) container.getLayout();
+                        layout.next(container);
+                    }
+                    else if (this.usertype.equals("CourtAdmin")){
+                        login.setVisible(false);
+                        container.setVisible(true);
+                        CourtAdmin courtadmin = new CourtAdmin();
+                        container.add("workArea", courtadmin);
                         CardLayout layout = (CardLayout) container.getLayout();
                         layout.next(container);
                     }
