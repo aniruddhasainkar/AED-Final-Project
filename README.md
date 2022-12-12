@@ -1,6 +1,6 @@
 # AED-Final-Project
 Blood Cancer Cure Management System helps and makes it easier to manage the process
-AED FINAL PROJECT
+
 
 Authors
 Aniruddha Sainkar Keerthanaa Kannan Shubham Sable
