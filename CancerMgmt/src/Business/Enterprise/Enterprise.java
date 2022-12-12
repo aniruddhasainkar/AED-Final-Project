@@ -12,6 +12,7 @@ import Business.Organization.OrganizationDirectory;
  *
  * @author JKU
  */
+
 public abstract class Enterprise extends Organization{
     
     private EnterpriseType enterpriseType;
