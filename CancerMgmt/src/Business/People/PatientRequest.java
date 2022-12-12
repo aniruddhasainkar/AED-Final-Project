@@ -12,7 +12,7 @@ import java.util.Date;
 
 /**
  *
- * @author JKU
+ * @author anniruddhasainkar
  */
 public class PatientRequest {
     

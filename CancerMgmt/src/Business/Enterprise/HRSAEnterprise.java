@@ -8,10 +8,7 @@ package Business.Enterprise;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-/**
- *
- * @author JKU
- */
+///hrsa enterprise/
 public class HRSAEnterprise extends Enterprise {
     
     public HRSAEnterprise(String name){

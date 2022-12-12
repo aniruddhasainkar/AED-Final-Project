@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author JKU
+ * @author shubhamsable
  */
 public class GovernmentOrganization extends Organization{
 

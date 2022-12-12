@@ -8,7 +8,10 @@ package Business.Enterprise;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-//bone marrow 
+/**
+ *
+ * @author shubhamsable
+ */
 public class BoneMarrowBankEnterprise extends Enterprise {
     
     public BoneMarrowBankEnterprise(String boneName){

@@ -8,7 +8,10 @@ package Business.Enterprise;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-//import from ar list
+/**
+ *
+ * @author shubhamsable
+ */
 public class BloodCancerCentreEnterprise extends Enterprise {
     
     public BloodCancerCentreEnterprise(String name){
