@@ -4,16 +4,12 @@ import Business.Employee.Employee;
 import Business.Role.SystemAdminRole;
 import Business.UserAccount.User;
 
-/**
- *
- * @author JKU
- */
 public class ConfigureASystem {
     
     public static EcoSystem configure(){
         
         EcoSystem system = EcoSystem.getInstance();
-        
+        //creation
         //Create a network
         //create an enterprise
         //initialize some organizations

@@ -5,11 +5,7 @@
 package Business.Employee;
 
 import java.util.Date;
-
-/**
- *
- * @author JKU
- */
+//we dont add plus sign as phone no is integer
 public class Employee {
     
     private String name;
