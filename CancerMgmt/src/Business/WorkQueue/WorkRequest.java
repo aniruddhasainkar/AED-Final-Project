@@ -13,7 +13,7 @@ import java.util.Date;
 
 /**
  *
- * @author JKU
+ * @author KeerthanaaKannan
  */
 public abstract class WorkRequest {
 

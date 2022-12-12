@@ -6,7 +6,7 @@ package Business.WorkQueue;
 
 /**
  *
- * @author JKU
+ * @author KeerthanaaKannan
  */
 public class SystemCoordinatorTestWorkRequest extends WorkRequest{
     

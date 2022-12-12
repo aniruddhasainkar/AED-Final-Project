@@ -9,7 +9,7 @@ import java.awt.Color;
 
 /**
  *
- * @author jayas
+ * @author KeerthanaaKannan
  */
 public class MagicJButton extends javax.swing.JButton {
     

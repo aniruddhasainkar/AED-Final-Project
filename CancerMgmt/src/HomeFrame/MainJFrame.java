@@ -20,7 +20,7 @@ import userinterface.GovernmentCoordinatorRole.NewDonorJPanel;
 
 /**
  *
- * @author Lingfeng
+ * @author KeerthanaaKannan
  */
 public class MainJFrame extends javax.swing.JFrame {
 

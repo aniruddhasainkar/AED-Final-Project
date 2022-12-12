@@ -7,7 +7,7 @@ package Magic.Design;
 
 /**
  *
- * @author jayas
+ * @author KeerthanaaKannan
  */
 public class MagicTextField extends javax.swing.JTextField{
     

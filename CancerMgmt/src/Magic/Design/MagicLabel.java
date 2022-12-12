@@ -7,7 +7,7 @@ package Magic.Design;
 
 /**
  *
- * @author umair
+ * @author KeerthanaaKannan
  */
 public class MagicLabel extends javax.swing.JLabel{
     
